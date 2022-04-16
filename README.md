@@ -13,7 +13,7 @@ This is a python program based on Git Actions modified to automatically generate
 
 1. Fork MSO_E5_Dev_AutoRenew_REVISION_2 to GitHub.
 
-2. Azure register the application, select any organization directory, redirect url select web, fill in http://localhost:53682/, register, save id and secret.
+2. In Azure Portal register new application in Azure Active Directory, select any organization directory, in redirect url select web, fill in http://localhost:53682/, register, save application id and secret.
 
 3. Set application permissions, select files.read.all files.readwrite.all sites.read.all sites.readwriter.all user.read.all user.readwrite.all directory.read.all directory.readwrite.all mail.read mail.readwrite mailboxsetting.read mailboxsetting.readwrite, all checked, should be the original 1 + 12, a total of 13, granted permissions.
 
