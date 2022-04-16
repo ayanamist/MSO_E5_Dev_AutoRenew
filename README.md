@@ -1,5 +1,5 @@
 # MSO_E5_Dev_AutoRenew_REVISION_2
-This is a python program based on Git Actions modified to automatically generate development actions via Microsoft Graph API like a real developer in order to active Microsoft Office 365 E5 Developer Trail subscription auto renew.
+This is a Python application based from Git Actions to produce development actions through Microsoft Graph API like a genuine developer in order to activate Microsoft Office 365  E5 Developer Trail membership auto renewal.
 ### Project description ###
 * Use GitHub action to run api calls automatically at regular intervals to keep E5 development active.
 * Free, no extra device/server needed, don't worry about it after deployment.
@@ -94,10 +94,8 @@ Usage limitations.
 (We use the public repository here, by definition, you can set an infinite loop to call, and then start once every 6 hours to ensure 24 hours a day call)
 
 # Notice
-This repo may lead to unknown issues, problems, information leaks, etc. 
+This repository may cause undiscovered difficulties, problems, or information breaches, among other things.
 
-Use at your own risk.
+You should use it at your own risk. For personal reasons, the author does not give aid or further assistance.
 
-The author DO NOT provide help or further assistance for personal reasons.
-
-Please DO NOT open issues or PR over this project, I do not have enough time to respond due to personal reasons, thanks for understanding.
+Please don't start issues or PRs about this project since I don't have enough time to answer due to personal obligations; thank you for understanding.
