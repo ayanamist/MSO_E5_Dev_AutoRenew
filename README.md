@@ -10,33 +10,36 @@ This is a python program based on Git Actions modified to automatically generate
 * Encrypted version address: https://github.com/wangziyingwen/AutoApiSecret
 
 ### Tutorial Summary ###
-```
-Fork MSO_E5_Dev_AutoRenew_REVISION_2 to GitHub.
 
-Azure register the application, select any organization directory, redirect url select web, fill in http://localhost:53682/, register, save id and secret.
+1. Fork MSO_E5_Dev_AutoRenew_REVISION_2 to GitHub.
 
-Set application permissions, select files.read.all files.readwrite.all sites.read.all sites.readwriter.all user.read.all user.readwrite.all directory.read.all directory.readwrite.all mail.read mail.readwrite mailboxsetting.read mailboxsetting.readwrite, all checked, should be the original 1 + 12, a total of 13, granted permissions.
+2. Azure register the application, select any organization directory, redirect url select web, fill in http://localhost:53682/, register, save id and secret.
 
-rclone execute command .\rclone authorize "onedrive" "id" "confidential", a confirmation box pops up, confirm and return refresh_token.
+3. Set application permissions, select files.read.all files.readwrite.all sites.read.all sites.readwriter.all user.read.all user.readwrite.all directory.read.all directory.readwrite.all mail.read mail.readwrite mailboxsetting.read mailboxsetting.readwrite, all checked, should be the original 1 + 12, a total of 13, granted permissions.
 
-go back to the GitHub own project, modify Secret.txt, paste refresh_token into it.
+4. rclone execute command .\rclone authorize "onedrive" "id" "confidential", a confirmation box pops up, confirm and return refresh_token.
+
+5. go back to the GitHub own project, modify Secret.txt, paste refresh_token into it.
 
 to the project setting item, respectively, add SECRETCONFIG_ID id=r'Application ID' CONFIG_KEY secret=r'secret'.
 
-click user avatar, enter user setting item, select developer setting, select personal access tokens, add GITHUB_TOKEN, select repo, admin: repo_hook, workflow, generate token.
+6. click user avatar, enter user setting item, select developer setting, select personal access tokens, add GITHUB_TOKEN, select repo, admin: repo_hook, workflow, generate token.
 
-return to GitHub own project, star project, enter actions, then refresh the page appears workflow project, construction is complete, click enter, check testapi, whether ten times run successfully.
+7. return to GitHub own project, star project, enter actions, then refresh the page appears workflow project, construction is complete, click enter, check testapi, whether ten times run successfully.
 
+Note: 
 The default setting is to run three rounds every six hours from Monday to Friday, you can modify your own crontab 12 */6 * * 1-5.
+
+--------------------------------------------------------------
+### Encrypted Version ###
 
 ### Difference ###
   The project uses a public repository (open code), where everyone can see the content of your code.
 
   So your application id, secrets, and tokens are displayed and are not secure.
 
- Encrypted version, I hide the application id, secret, token because it needs to be updated in real time, can not be hidden (I will not!) The security will be much higher!
+Encrypted version, hide the application id, secret, token because it needs to be updated in real time, can not be hidden (I will not!) The security will be much higher!
 
---------------------------------------------------------------
 
 ### Steps ###
 
@@ -51,7 +54,7 @@ The default setting is to run three rounds every six hours from Monday to Friday
 id=r'your application id'
   CONFIG_KEY
   secret=r'your application secret'
-  ```
+  
   
 * Go to your personal settings page (Settings in the top right header, not Settings in the repository) and select Developer settings > Personal access tokens > Generate new token,
   Generate new token
