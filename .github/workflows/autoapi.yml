@@ -49,7 +49,7 @@ jobs:
         rm -f configkey.txt    
     - name: Commit #上传新的refresh_token到仓库
       run: |
-        git config --global user.email kylejohnmarky075@gmail.com
+        git config --global user.email kjmcabangon@slsu.edu.ph
         git config --global user.name MSAutoSubscribeService
         git add .
         git commit -m "Update new refresh token with MSO_E5_Dev_AutoRenew_REVISION_2" -a
