@@ -3,11 +3,11 @@ This is a Python application based from Git Actions to produce development actio
 ### Project description ###
 * Use GitHub action to run api calls automatically at regular intervals to keep E5 development active.
 * Free, no extra device/server needed, don't worry about it after deployment.
-* Encrypted version, hide app id + secret, protect account security
+[![MS AutoSubscribeService with GitHub v2](https://github.com/kylierst/MSO_E5_Dev_AutoRenew_REVISION_2/actions/workflows/autoapi.yml/badge.svg?branch=main)](https://github.com/kylierst/MSO_E5_Dev_AutoRenew_REVISION_2/actions/workflows/autoapi.yml)
 
 ### Special Notes/Thanks ###
 * Normal version address: https://github.com/kylierst/MSO_E5_Dev_AutoRenew_REVISION_2
-* Encrypted version address: https://github.com/wangziyingwen/AutoApiSecret
+* Thanks to Ken5889 for code improvements and fix job skipping
 
 ### Tutorial Summary ###
 
