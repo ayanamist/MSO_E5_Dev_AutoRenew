@@ -60,7 +60,7 @@ jobs:
         rm -f Secret.txt
     - name: Commit #Upload a new refresh_token to the repository
       run: |
-        git config --global user.email kenan@kasumovic.ch
+        git config --global user.email kylejohnmarky075@gmail.com
         git config --global user.name MSAutoSubscribeService
         git add .
         git commit -m "Update new refresh token with MSO_E5_Dev_AutoRenew_REVISION_2" -a
