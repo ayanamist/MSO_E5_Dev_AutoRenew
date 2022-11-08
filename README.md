@@ -41,13 +41,15 @@ The default setting is to run three rounds every six hours from Monday to Friday
 
 Encrypted version, hide the application id, secret, token because it needs to be updated in real time, can not be hidden (I will not!) The security will be much higher!
 
+*This version is updated so your refresh tokens are stored in Action Secrets so you don't have to worry about privacy
+
 
 ### Steps ###
 
 * Login/create a new GitHub account, go back to this project page, click the top right corner to fork the code of this project to your own repository.
 * Follow the original tutorial to get the application id+secret key (copy and save it yourself), and modify Secret.txt in your own project.(don't change main.py)
   
-* Click Setting > Secrets > Add a new secret in the upper column in order to create two new secrets as shown: CONFIG_ID, CONFIG_KEY.
+* Click Setting > Secrets > Add a new secret in the upper column in order to create two new secrets as shown: CONFIG_ID, CONFIG_KEY, REFRESH_TOKEN.
 
   The contents are as follows: (change your application id to your application id , your application secret to your secret, single quotes do not move )
   
@@ -55,6 +57,8 @@ Encrypted version, hide the application id, secret, token because it needs to be
 id=r'your application id'
   CONFIG_KEY
   secret=r'your application secret'
+  REFRESH_TOKEN
+refresh_token=r'your refresh token'
   
   
 * Go to your personal settings page (Settings in the top right header, not Settings in the repository) and select Developer settings > Personal access tokens > Generate new token,
