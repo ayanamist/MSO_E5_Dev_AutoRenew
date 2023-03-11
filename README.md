@@ -14,7 +14,7 @@ MSO_E5_Dev_AutoRenew is a Python application based on Git Actions that uses Micr
 
 ## **Setup Steps (Encrypted Secure Version)**
 
-1. Fork the active365 repository to your GitHub account.
+1. Fork the MSO_E5_Dev_AutoRenew repository to your GitHub account.
 2. Register a new application in Azure Active Directory.
     - Select any organization directory, select "Web" for the redirect URL, and enter "**[http://localhost:53682/](http://localhost:53682/)**" for the redirect URL.
     - Save the Application ID and Secret.
