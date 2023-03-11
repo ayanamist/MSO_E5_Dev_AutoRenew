@@ -1,5 +1,5 @@
 #Automatic call to the API to keep alive, encrypted version
-name: MS AutoSubscribeService with GitHub v2
+name: active365
 
 on: 
   release:
@@ -24,7 +24,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
       with:
-        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+        persist-credentials: true # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
         fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
     - name: Set up Python #Install python
       uses: actions/setup-python@v4
@@ -60,10 +60,10 @@ jobs:
         rm -f Secret.txt
     - name: Commit #Upload a new refresh_token to the repository
       run: |
-        git config --global user.email kylejohnmarky075@gmail.com
-        git config --global user.name MSAutoSubscribeService
+        git config --global user.email kjmcabangon@slsu.edu.ph
+        git config --global user.name kylierst
         git add .
-        git commit -m "Update new refresh token with MSO_E5_Dev_AutoRenew_REVISION_2" -a
+        git commit -m "Update new refresh token with MSO_E5_Dev_AutoRenew" -a
     - name: Push changes
       uses: ad-m/github-push-action@v0.6.0
       with:
