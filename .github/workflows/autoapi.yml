@@ -1,5 +1,5 @@
 #Automatic call to the API to keep alive, encrypted version
-name: active365
+name: MSO_E5_Dev_AutoRenew
 
 on: 
   release:
