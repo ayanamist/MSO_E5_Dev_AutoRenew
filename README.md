@@ -30,9 +30,9 @@ MSO_E5_Dev_AutoRenew is a Python application based on Git Actions that uses Micr
 7. Keep Application ID, Secret, Refresh_token handly you will need it in the next step
 8. Go to the project settings and from the left hand side menu select Secrets and Variables > Actions
 9. Click **New repository secrets.** and create three variables and set the value as given below
-    - Name: **`CONFIG_ID`** value client_id=r’your applcation_id’ (within the quotes)
-    - Name: **`CONFIG_KEY`** value client_secret=r’your_secret’
-    - Name: **`REFRESH_TOKEN`** value refresh_token=r’your_refresh_token’
+    - Name: **`CONFIG_ID`** value client_id=r'your applcation_id' (within the quotes)
+    - Name: **`CONFIG_KEY`** value client_secret=r'your_secret'
+    - Name: **`REFRESH_TOKEN`** value refresh_token=r'your_refresh_token'
 10. Goto the project setting again and choose Actions menu and scroll down until you see **Workflow permissions click Read and write permission option**
 11. Go to your personal settings page on GitHub, select Developer settings > Personal access tokens > Generate new token.
     - Set the name to **`GITHUB_TOKEN`**.
