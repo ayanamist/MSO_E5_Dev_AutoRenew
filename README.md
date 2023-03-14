@@ -9,6 +9,7 @@ MSO_E5_Dev_AutoRenew is a Python application based on Git Actions that uses Micr
 ## **Prerequisites**
 
 - A GitHub account
+- An existing or new Microsoft Developer E5 account with trial Subscription
 - An Azure Portal account
 - Basic knowledge of GitHub, Python, and Azure Portal
 
