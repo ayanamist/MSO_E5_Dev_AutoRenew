@@ -1,6 +1,7 @@
 import requests
 import json
 import time
+import random 
 
 # Register the azure app first and make sure the app has the following permissions:
 # files: Files.Read.All、Files.ReadWrite.All、Sites.Read.All、Sites.ReadWrite.All
@@ -13,7 +14,7 @@ import time
 
 
 
-endpoints = [
+calls = [
     'https://graph.microsoft.com/v1.0/me/drive/root',
     'https://graph.microsoft.com/v1.0/me/drive',
     'https://graph.microsoft.com/v1.0/drive/root',
@@ -23,8 +24,17 @@ endpoints = [
     'https://graph.microsoft.com/v1.0/me/drive/root/children',
     'https://api.powerbi.com/v1.0/myorg/apps',
     'https://graph.microsoft.com/v1.0/me/mailFolders',
-    'https://graph.microsoft.com/v1.0/me/outlook/masterCategories'
+    'https://graph.microsoft.com/v1.0/me/outlook/masterCategories',
+    'https://graph.microsoft.com/v1.0/applications?$count=true',
+    'https://graph.microsoft.com/v1.0/me/?$select=displayName,skills',
+    'https://graph.microsoft.com/v1.0/me/mailFolders/Inbox/messages/delta',
+    'https://graph.microsoft.com/beta/me/outlook/masterCategories',
+    'https://graph.microsoft.com/beta/me/messages?$select=internetMessageHeaders&$top=1',
+    'https://graph.microsoft.com/v1.0/sites/root/lists',
+    'https://graph.microsoft.com/v1.0/sites/root',
+    'https://graph.microsoft.com/v1.0/sites/root/drives'
 ]
+
 
 def get_access_token(refresh_token, client_id, client_secret):
     headers = {
@@ -44,6 +54,8 @@ def get_access_token(refresh_token, client_id, client_secret):
     return access_token
 
 def main():
+    random.shuffle(calls)
+    endpoints = calls[random.randint(0,10)::]
     access_token = get_access_token(refresh_token, client_id, client_secret)
     session = requests.Session()
     session.headers.update({
@@ -62,6 +74,7 @@ def main():
             pass
     localtime = time.asctime(time.localtime(time.time()))
     print('The end of this run is :', localtime)
+    print('Number of calls is :', str(len(endpoints)))
 
 for _ in range(3):
     main()
